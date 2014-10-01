@@ -1,0 +1,37 @@
+.entry-content .edd-csau-products h2,
+.edd-csau-products h2 {
+  margin: 24px 24px 0 24px;
+}
+.edd-csau-products {
+  clear: both;
+  border: 1px solid #eee;
+  margin-bottom: 21px;
+}
+.edd-csau-products .edd_download_inner {
+  padding: 24px;
+}
+.edd-csau-products .edd_download {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.edd-csau-products:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.edd-csau-products .edd-cart-added-alert {
+  position: relative;
+}
+@media only screen and (min-width: 720px) {
+  .edd_download {
+    float: left;
+  }
+  .edd-csau-products.col-2 .edd_download {
+    width: 50%;
+  }
+  .edd-csau-products.col-3 .edd_download {
+    width: 33.333333333%;
+  }
+}

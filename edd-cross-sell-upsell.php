@@ -38,7 +38,7 @@ if ( ! class_exists( 'EDD_Cross_Sell_And_Upsell' ) ) {
 		/**
 		 * Plugin Title
 		 */
-		public $title = 'Cross-sell and Upsell';
+		public $title = 'EDD Cross-sell and Upsell';
 
 		/**
 		 * Main Instance

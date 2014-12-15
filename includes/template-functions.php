@@ -94,7 +94,7 @@ function edd_csau_html( $columns = '3' ) {
 			if ( $downloads->have_posts() ) :
 
 			// upsell heading
-			if( is_singular( 'download' ) ) {
+			if ( is_singular( 'download' ) ) {
 				$upsell_heading = get_post_meta( get_the_ID(), '_edd_csau_upsell_heading', true );
 
 				// show singular heading
@@ -110,7 +110,7 @@ function edd_csau_html( $columns = '3' ) {
 				}
 			}
 			// cross-sell heading
-			elseif( edd_is_checkout() ) {
+			elseif ( edd_is_checkout() ) {
 				$ids = edd_csau_get_cart_trigger_ids();
 
 				if ( count( $ids ) == 1 ) {
@@ -151,7 +151,9 @@ function edd_csau_html( $columns = '3' ) {
  
 			<div <?php echo $class_list; ?>>
 
-			<h2><?php echo esc_attr( $heading ); ?></h2>
+				<?php if ( $heading ) : ?>
+				<h2><?php echo esc_attr( $heading ); ?></h2>
+				<?php endif; ?>
 
 				<?php while ( $downloads->have_posts() ) : $downloads->the_post(); ?>
 					<div itemscope itemtype="http://schema.org/Product" class="<?php echo apply_filters( 'edd_download_class', 'edd_download', '', '' ); ?>" id="edd_download_<?php echo get_the_ID(); ?>">
@@ -168,11 +170,14 @@ function edd_csau_html( $columns = '3' ) {
 							edd_get_template_part( 'shortcode', 'content-image' );
 							edd_get_template_part( 'shortcode', 'content-title' );
 
-							if ( $show_price )
+							if ( $show_price ) {
 								edd_get_template_part( 'shortcode', 'content-price' );
+							}
 
-							if ( $show_excerpt )
+
+							if ( $show_excerpt ) {
 								edd_get_template_part( 'shortcode', 'content-excerpt' );
+							}
 
 							// if the download is not in the cart, show the add to cart button
 

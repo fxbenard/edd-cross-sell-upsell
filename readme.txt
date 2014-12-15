@@ -8,6 +8,14 @@ Increase sales and customer retention by Cross-selling and Uselling to your cust
 
 == Changelog ==
 
+= 1.1.1 =
+
+* New: Plugin activation script
+* Fix: Plugin no longer deactivates itself when EDD is updated
+* Fix: When no cross-sell/upsell heading is specified there is no longer empty heading tags in the HTML
+* Tweak: Removed unneccessary EDD licensing files
+* Tweak: Updated translation file/s
+
 = 1.1 =
 
 * Fix: Incorrect cross-sell heading being shown at checkout when two cross-sell trigger products had exactly the same cross-sells

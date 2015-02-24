@@ -6,11 +6,14 @@ Description: Increase sales and customer retention by Cross-selling and Upsellin
 Version: 1.1.1
 Author: Andrew Munro, Sumobi
 Author URI: http://sumobi.com/
+Text Domain: edd-csau
+Domain Path: languages
 */
 
 // Exit if accessed directly
-if ( ! defined( 'ABSPATH' ) ) exit;
-
+if ( ! defined( 'ABSPATH' ) ) {
+	die( '-1' );
+}
 
 if ( ! class_exists( 'EDD_Cross_Sell_And_Upsell' ) ) {
 
@@ -85,7 +88,7 @@ if ( ! class_exists( 'EDD_Cross_Sell_And_Upsell' ) ) {
 			$this->file         = __FILE__;
 			$this->basename     = apply_filters( 'edd_csau_plugin_basenname', plugin_basename( $this->file ) );
 			$this->plugin_dir   = apply_filters( 'edd_csau_plugin_dir_path',  plugin_dir_path( $this->file ) );
-			$this->plugin_url   = apply_filters( 'edd_csau_plugin_dir_url',   plugin_dir_url ( $this->file ) );
+			$this->plugin_url   = apply_filters( 'edd_csau_plugin_dir_url',   plugin_dir_url( $this->file ) );
 
 			// includes
 			$this->includes_dir = apply_filters( 'edd_csau_includes_dir', trailingslashit( $this->plugin_dir . 'includes'  ) );
@@ -202,8 +205,6 @@ if ( ! class_exists( 'EDD_Cross_Sell_And_Upsell' ) ) {
 				do_action( 'edd_csau_include_admin_files' );
 
 			}
-
-			
 		}
 
 		/**
@@ -241,7 +242,7 @@ if ( ! class_exists( 'EDD_Cross_Sell_And_Upsell' ) ) {
 		}
 
 	}
-	
+
 	/**
 	 * Loads a single instance
 	 *
@@ -268,7 +269,7 @@ if ( ! class_exists( 'EDD_Cross_Sell_And_Upsell' ) ) {
 
 	        $activation = new EDD_Extension_Activation( plugin_dir_path( __FILE__ ), basename( __FILE__ ) );
 	        $activation = $activation->run();
-	        
+
 	    } else {
 	        return EDD_Cross_Sell_And_Upsell::get_instance();
 	    }

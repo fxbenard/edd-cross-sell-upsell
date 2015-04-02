@@ -113,7 +113,7 @@ function edd_csau_html( $columns = '3' ) {
 			elseif ( edd_is_checkout() ) {
 				$ids = edd_csau_get_cart_trigger_ids();
 
-				if ( count( $ids ) == 1 ) {
+				if ( count( $ids ) == 1 && get_post_meta( $ids[0], '_edd_csau_cross_sell_heading', true ) ) {
 				    $heading = esc_attr( get_post_meta( $ids[0], '_edd_csau_cross_sell_heading', true ) );
 				}
 				// show default in settings

@@ -3,7 +3,7 @@
 Plugin Name: Easy Digital Downloads - Cross-sell & Upsell
 Plugin URI: http://sumobi.com/shop/edd-cross-sell-and-upsell/
 Description: Increase sales and customer retention by Cross-selling and Upselling to your customers
-Version: 1.1.1
+Version: 1.1.2
 Author: Andrew Munro, Sumobi
 Author URI: http://sumobi.com/
 */
@@ -33,7 +33,7 @@ if ( ! class_exists( 'EDD_Cross_Sell_And_Upsell' ) ) {
 		/**
 		 * Plugin Version
 		 */
-		private $version = '1.1.1';
+		private $version = '1.1.2';
 
 		/**
 		 * Plugin Title

@@ -24,7 +24,7 @@ if ( ! class_exists( 'WP_List_Table' ) ) {
  * @since 1.1
  */
 class EDD_CSAU_Log_Table extends WP_List_Table {
-	
+
 	/**
 	 * Number of results to show per page
 	 *
@@ -68,11 +68,11 @@ class EDD_CSAU_Log_Table extends WP_List_Table {
 	public function column_default( $item, $column_name ) {
 		switch ( $column_name ){
 			case 'download' :
-				return '<a href="' . add_query_arg( 'download', $item[ $column_name ] ) . '" >' . get_the_title( $item[ $column_name ] ) . '</a>';
+				return '<a href="' . esc_url( add_query_arg( 'download', $item[ $column_name ] ) ) . '" >' . get_the_title( $item[ $column_name ] ) . '</a>';
 
 			case 'user_id' :
 				return '<a href="' .
-					admin_url( 'edit.php?post_type=download&page=edd-payment-history&user=' . urlencode( $item['user_id'] ) ) .
+					esc_url( admin_url( 'edit.php?post_type=download&page=edd-payment-history&user=' . urlencode( $item['user_id'] ) ) ) .
 					 '">' . $item[ 'user_name' ] . '</a>';
 
 			case 'amount' :

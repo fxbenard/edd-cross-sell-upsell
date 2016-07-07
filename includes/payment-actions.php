@@ -15,8 +15,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 */
 function edd_csau_payment_actions( $payment_id ) {
 
-	$cart_details = edd_get_payment_meta_cart_details( $payment_id );
-	
+	$payment      = new EDD_Payment( $payment_id );
+	$cart_details = $payment->cart_details;
+
 	if ( is_array( $cart_details ) ) {
 
 		// Increase purchase count and earnings
@@ -32,12 +33,13 @@ function edd_csau_payment_actions( $payment_id ) {
 
 				if ( ! edd_is_test_mode() || apply_filters( 'edd_log_test_payment_stats', false ) ) {
 
-					if ( isset( $download['item_number']['cross_sell'] ) )
+					if ( isset( $download['item_number']['options']['cross_sell'] ) ) {
 						$type = 'cross_sell';
-					elseif ( isset( $download['item_number']['upsell'] ) )
+					} elseif ( isset( $download['item_number']['options']['upsell'] ) ) {
 						$type = 'upsell';
-					else
+					} else {
 						$type = null;
+					}
 
 					if ( $type ) {
 						edd_csau_increase_purchase_count( $download['id'], $type );
@@ -50,7 +52,7 @@ function edd_csau_payment_actions( $payment_id ) {
 				$types[] = $type;
 				$types = array_unique( array_filter( $types ) );
 			}
-			
+
 		}
 
 		// Clear the total earnings cache

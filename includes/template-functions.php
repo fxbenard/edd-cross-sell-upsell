@@ -23,9 +23,9 @@ function edd_csau_html( $columns = '3' ) {
 	}
 	// cross-sell products at checkout
 	elseif ( edd_is_checkout() ) {
-		
+
 		// get contents on the cart
-		$cart_items = edd_get_cart_contents(); 
+		$cart_items = edd_get_cart_contents();
 
 		// return if there's nothing in the cart
 		if ( ! $cart_items )
@@ -68,8 +68,8 @@ function edd_csau_html( $columns = '3' ) {
 	}
 
 	if ( $products ) { ?>
-		
-		<?php 
+
+		<?php
 
 			if ( edd_is_checkout() ) {
 				$posts_per_page = isset( $edd_options[ 'edd_csau_cross_sell_number' ] ) && !empty( $edd_options[ 'edd_csau_cross_sell_number' ] ) ? $edd_options[ 'edd_csau_cross_sell_number' ] : '3';
@@ -126,39 +126,39 @@ function edd_csau_html( $columns = '3' ) {
 			} // end is_checkout
 
 			$i = 1;
-			
+
 			global $wp_query;
 
 			//$download_count = $downloads->found_posts > 3 ? 3 : $downloads->found_posts;
-			
+
 			$classes = array();
 			$classes = apply_filters( 'edd_csau_classes', $classes );
 
 			// default classes
 			$classes[] = 'edd-csau-products';
-			
+
 			// columns
 			if( $columns )
 				$classes[] = 'col-' . $columns;
 
 			// filter array and remove empty values
 			$classes = array_filter( $classes );
-			$classes = !empty( $classes ) ? implode( ' ', $classes ) : '';	
+			$classes = !empty( $classes ) ? implode( ' ', $classes ) : '';
 			$class_list = !empty( $classes ) ? 'class="' . $classes  . '"' : '';
 
 			ob_start();
 			?>
- 
+
 			<div <?php echo $class_list; ?>>
 
 				<?php if ( $heading ) : ?>
-				<h2><?php echo esc_attr( $heading ); ?></h2>
+				<h2><?php echo esc_html( $heading ); ?></h2>
 				<?php endif; ?>
 
 				<?php while ( $downloads->have_posts() ) : $downloads->the_post(); ?>
 					<div itemscope itemtype="http://schema.org/Product" class="<?php echo apply_filters( 'edd_download_class', 'edd_download', '', '' ); ?>" id="edd_download_<?php echo get_the_ID(); ?>">
 						<div class="edd_download_inner">
-						
+
 							<?php
 
 							do_action( 'edd_csau_download_before' );
@@ -183,12 +183,12 @@ function edd_csau_html( $columns = '3' ) {
 
 							if ( edd_is_checkout() ) {
 
-								if ( ! edd_item_in_cart( get_the_ID() ) ) { 
+								if ( ! edd_item_in_cart( get_the_ID() ) ) {
 									$text = apply_filters( 'edd_csau_cross_sell_add_to_cart_text', __( 'Add to cart', 'edd-csau' ) );
 									$price = apply_filters( 'edd_csau_cross_sell_show_button_price', false );
 
-									if ( $show_button ) : ?> 
-									
+									if ( $show_button ) : ?>
+
 									<div class="edd_download_buy_button">
 										<?php echo edd_get_purchase_link( array( 'download_id' => get_the_ID(), 'text' => $text, 'price' => $price ) ); ?>
 									</div>
@@ -197,13 +197,13 @@ function edd_csau_html( $columns = '3' ) {
 								<?php } else {
 									echo apply_filters( 'edd_csau_added_to_cart_text', '<span class="edd-cart-added-alert"><i class="edd-icon-ok"></i> '. __( 'Added to cart', 'edd-csau' ) . '</span>' );
 								}
-							} else { 
+							} else {
 								$text = apply_filters( 'edd_csau_upsell_add_to_cart_text', __( 'Add to cart', 'edd-csau' ) );
-								$price = apply_filters( 'edd_csau_upsell_show_button_price', false );	
+								$price = apply_filters( 'edd_csau_upsell_show_button_price', false );
 
 								$show_button = apply_filters( 'edd_csau_upsell_show_button', true );
 
-								if ( $show_button ) : 
+								if ( $show_button ) :
 							?>
 								<div class="edd_download_buy_button">
 									<?php echo edd_get_purchase_link( array( 'download_id' => get_the_ID(), 'text' => $text, 'price' => $price ) ); ?>
@@ -234,7 +234,7 @@ function edd_csau_html( $columns = '3' ) {
 
 ?>
 
-<?php } 
+<?php }
 
 
 /**

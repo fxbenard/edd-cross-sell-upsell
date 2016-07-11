@@ -19,9 +19,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 function edd_csau_increase_purchase_count( $download_id, $type ) {
 
 	$sales = edd_csau_get_download_sales_stats( $download_id, $type );
-	
+
 	$sales = $sales + 1;
-	
+
 	if ( update_post_meta( $download_id, '_edd_download_' . $type . '_sales', $sales ) )
 		return $sales;
 
@@ -162,9 +162,9 @@ function edd_csau_undo_purchase_on_refund( $payment_id, $new_status, $old_status
 	if( $downloads ) {
 		foreach( $downloads as $download ) {
 
-			if ( isset( $download['item_number']['cross_sell'] ) )
+			if ( isset( $download['item_number']['options']['cross_sell'] ) )
 				$type = 'cross_sell';
-			elseif ( isset( $download['item_number']['upsell'] ) )
+			elseif ( isset( $download['item_number']['options']['upsell'] ) )
 				$type = 'upsell';
 			else
 				$type = null;
@@ -203,7 +203,7 @@ function edd_csau_record_sale_in_log( $download_id, $payment_id, $price_id = fal
 		'log_type'		=> $type
 	);
 
-	// store log meta 
+	// store log meta
 	$log_meta = array(
 		'payment_id'    => $payment_id,
 		$type .'_id' 	=> $download_id, // store the cross-sell/upsell's ID. Useful for getting the IDs of all Cross-sells
@@ -316,7 +316,7 @@ function edd_csau_get_total_earnings( $type ) {
 
 			// Cache results for 1 day. This cache is cleared automatically when a payment is made
 			set_transient( 'edd_' . $type . '_earnings_total', $total, 86400 );
-			
+
 			// Store the total for the first time
 			update_option( 'edd_' . $type . '_earnings_total', $total );
 		}
@@ -338,15 +338,15 @@ function edd_csau_get_total_earnings( $type ) {
  * @return string $amount Payment amount
  */
 function edd_csau_get_payment_amount( $payment_id, $type ) {
-	
+
 	$amount = get_post_meta( $payment_id, '_edd_payment_' . $type . '_total', true );
-	
+
 	return apply_filters( 'edd_csau_' . $type . '_amount', $amount, $type );
 }
 
 /**
  * Calculate the total price amount of cross-sells/upsells to store with each purchase
- * 
+ *
  * @since 1.1
  * @return $amount total cross-sell/upsell payment total
 */
@@ -359,7 +359,7 @@ function edd_csau_calculate_sales( $payment_id, $type ) {
 
 	foreach ( $cart_details as $item ) {
 		// add each cross-sell/upsell amount to array
-		if ( isset( $item['item_number'][$type] ) ) {
+		if ( isset( $item['item_number']['options'][$type] ) ) {
 			$amounts[] = $item['price'] * $item['quantity'];
 		}
 	}
@@ -369,7 +369,7 @@ function edd_csau_calculate_sales( $payment_id, $type ) {
 
 		return $amount;
 	}
-	
+
 	return null;
-	
+
 }

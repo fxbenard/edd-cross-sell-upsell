@@ -121,9 +121,9 @@ class EDD_Cross_Sells_Export extends EDD_Export {
 
 			if ( $downloads ) {
 				foreach ( $downloads as $key => $download ) {
-					
+
 					// skip over downloads which aren't cross-sells
-					if ( ! isset( $download['item_number']['cross_sell'] ) )
+					if ( ! isset( $download['item_number']['options']['cross_sell'] ) )
 						continue;
 
 						// Download ID
@@ -159,10 +159,10 @@ class EDD_Cross_Sells_Export extends EDD_Export {
 							if( edd_use_skus() )
 								$skus .= ' / ';
 						}
-					
+
 				}
 			}
-			 
+
 			if ( is_numeric( $user_id ) ) {
 				$user = get_userdata( $user_id );
 			} else {

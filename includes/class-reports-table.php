@@ -38,6 +38,8 @@ class EDD_CSAU_Reports_Table extends WP_List_Table {
 	 */
 	private $products;
 
+	private $type;
+
 	/**
 	 * Get things started
 	 *
@@ -47,6 +49,7 @@ class EDD_CSAU_Reports_Table extends WP_List_Table {
 	public function __construct( $type ) {
 		global $status, $page;
 
+		// cross_sell or upsell
 		$this->type = $type;
 
 		// Set parent defaults
@@ -165,7 +168,7 @@ class EDD_CSAU_Reports_Table extends WP_List_Table {
 	 * @since 1.5
 	 * @return void
 	 */
-	public function bulk_actions() {
+	public function bulk_actions( $which = '' ) {
 		// These aren't really bulk actions but this outputs the markup in the right place
 		edd_report_views();
 	}
@@ -192,7 +195,7 @@ class EDD_CSAU_Reports_Table extends WP_List_Table {
 	 * @return void
 	 */
 	public function query() {
-		
+
 		// find all trigger downloads
 		$args = array(
 		    'post_type' => 'download',
@@ -205,7 +208,7 @@ class EDD_CSAU_Reports_Table extends WP_List_Table {
 		);
 
 		$trigger_downloads = get_posts( $args );
-
+		
 		$cross_sell_ids = array();
 		$ids = array();
 		$trigger_download_ids = array();

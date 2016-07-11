@@ -33,6 +33,8 @@ class EDD_CSAU_Log_Table extends WP_List_Table {
 	 */
 	public $per_page = 30;
 
+	private $type;
+	 
 	/**
 	 * Get things started
 	 *
@@ -226,7 +228,7 @@ class EDD_CSAU_Log_Table extends WP_List_Table {
 	 * @since 1.4
 	 * @return void
 	 */
-	function bulk_actions() {
+	function bulk_actions( $which = '' ) {
 		// These aren't really bulk actions but this outputs the markup in the right place
 		edd_log_views();
 	}

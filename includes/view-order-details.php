@@ -21,8 +21,10 @@ function edd_csau_view_order_details_cross_sells( $payment_id ) {
 	$user_id      = edd_get_payment_user_id( $payment_id );
 	$payment_date = strtotime( $item->post_date );
 
-	if ( ! get_post_meta( $payment_id, '_edd_payment_cross_sell_total', true ) )
+	if ( ! get_post_meta( $payment_id, '_edd_payment_cross_sell_total', true ) ) {
 		return;
+	}
+
 ?>
 <div id="edd-purchased-files" class="postbox">
 	<h3 class="hndle"><?php _e( 'Cross-sells included with this payment', 'edd-csau' ); ?></h3>
@@ -37,7 +39,7 @@ function edd_csau_view_order_details_cross_sells( $payment_id ) {
 						$price_override = isset( $payment_meta['cart_details'] ) ? $cart_item['price'] : null;
 						$price = edd_get_download_final_price( $id, $user_info, $price_override );
 
-						if ( ! isset( $cart_item['item_number']['cross_sell'] ) )
+						if ( ! isset( $cart_item['item_number']['options']['cross_sell'] ) )
 							continue;
 						?>
 						<tr class="<?php if ( $i % 2 == 0 ) { echo 'alternate'; } ?>">
@@ -45,7 +47,7 @@ function edd_csau_view_order_details_cross_sells( $payment_id ) {
 								<?php
 								echo '<a href="' . admin_url( 'post.php?post=' . $id . '&action=edit' ) . '">' . get_the_title( $id ) . '</a>';
 
-								if ( isset( $cart_items[ $key ]['item_number'] ) ) {
+								if ( isset( $cart_items[ $key ]['item_number']['options'] ) ) {
 									$price_options = $cart_items[ $key ]['item_number']['options'];
 
 									if ( isset( $price_options['price_id'] ) ) {
@@ -97,7 +99,7 @@ if ( ! get_post_meta( $payment_id, '_edd_payment_upsell_total', true ) )
 						$price_override = isset( $payment_meta['cart_details'] ) ? $cart_item['price'] : null;
 						$price = edd_get_download_final_price( $id, $user_info, $price_override );
 
-						if ( ! isset( $cart_item['item_number']['upsell'] ) )
+						if ( ! isset( $cart_item['item_number']['options']['upsell'] ) )
 							continue;
 						?>
 						<tr class="<?php if ( $i % 2 == 0 ) { echo 'alternate'; } ?>">

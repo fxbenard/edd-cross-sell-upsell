@@ -4,6 +4,19 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 /**
+ * Register our settings section
+ *
+ * @since 1.1.4
+ * @return array
+ */
+function edd_csau_settings_section( $sections ) {
+	// Note the array key here of 'ck-settings'
+	$sections['csau'] = __( 'Cross-sell & Upsell', 'edd-csau' );
+	return $sections;
+}
+add_filter( 'edd_settings_sections_extensions', 'edd_csau_settings_section' );
+
+/**
  * Adds the settings to the Misc section
  *
  * @since 1.0
@@ -60,6 +73,11 @@ function edd_csau_add_settings( $settings ) {
 			'std' => '3'
 		),
 	);
+
+	if ( version_compare( EDD_VERSION, 2.5, '>=' ) ) {
+		// Use the previously noted array key as an array key again and next your settings
+		$edd_csau_settings = array( 'csau' => $edd_csau_settings );
+	}
 
 	return array_merge( $settings, $edd_csau_settings );
 

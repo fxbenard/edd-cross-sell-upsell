@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Easy Digital Downloads - Cross-sell & Upsell
-Plugin URI: http://sumobi.com/shop/edd-cross-sell-and-upsell/
+Plugin URI: https://easydigitaldownloads.com/downloads/edd-cross-sell-and-upsell/
 Description: Increase sales and customer retention by Cross-selling and Upselling to your customers
 Version: 1.1.4
-Author: Andrew Munro, Sumobi
-Author URI: http://sumobi.com/
+Author: Easy Digital Downloads
+Author URI: https://easydigitaldownloads.com
 */
 
 // Exit if accessed directly
@@ -115,7 +115,6 @@ if ( ! class_exists( 'EDD_Cross_Sell_And_Upsell' ) ) {
 		 */
 		private function setup_actions() {
 
-			add_filter( 'plugin_row_meta', array( $this, 'plugin_meta' ), 10, 2 );
 			add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array( $this, 'settings_link' ), 10, 2 );
 
 			do_action( 'edd_csau_setup_actions' );
@@ -217,27 +216,6 @@ if ( ! class_exists( 'EDD_Cross_Sell_And_Upsell' ) ) {
 			);
 
 			return array_merge( $plugin_links, $links );
-		}
-
-		/**
-		 * Modify plugin metalinks
-		 *
-		 * @access      public
-		 * @since       1.1.1
-		 * @param       array $links The current links array
-		 * @param       string $file A specific plugin table entry
-		 * @return      array $links The modified links array
-		 */
-		public function plugin_meta( $links, $file ) {
-		    if ( $file == plugin_basename( __FILE__ ) ) {
-		        $plugins_link = array(
-		            '<a title="'. __( 'View more plugins for Easy Digital Downloads by Sumobi', 'edd-csau' ) .'" href="https://easydigitaldownloads.com/blog/author/andrewmunro/?ref=166" target="_blank">' . __( 'Author\'s EDD plugins', 'edd-csau' ) . '</a>'
-		        );
-
-		        $links = array_merge( $links, $plugins_link );
-		    }
-
-		    return $links;
 		}
 
 	}

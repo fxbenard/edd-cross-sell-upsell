@@ -7,8 +7,13 @@ Author URI: http://sumobi.com/
 Increase sales and customer retention by Cross-selling and Uselling to your customers
 
 == Changelog ==
+
+= 1.1.4 =
+* Fix: Cross-sells/Upsells not showing reports
+* Tweak: Extension settings moved to sub-section
+
 = 1.1.3 =
-* FIX: XSS vulnerability in query args
+* Fix: XSS vulnerability in query args
 
 = 1.1.2 =
 * Fix: Default Cross-sell heading was not showing at checkout when their was one trigger download and no per-download cross-sell heading defined

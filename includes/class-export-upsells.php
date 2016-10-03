@@ -123,7 +123,7 @@ class EDD_Upsells_Export extends EDD_Export {
 				foreach ( $downloads as $key => $download ) {
 
 					// skip over downloads which aren't upsells
-					if ( ! isset( $download['item_number']['upsell'] ) )
+					if ( ! isset( $download['item_number']['options']['upsell'] ) )
 						continue;
 
 					// Download ID

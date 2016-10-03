@@ -61,7 +61,7 @@ function edd_csau_get_cross_sells_in_cart() {
 		 	}
 		}
 	}
-	
+
 	return $ids;
 }
 
@@ -125,13 +125,13 @@ function edd_csau_get_cart_product_ids() {
  * @since 1.0
 */
 function edd_csau_get_cart_non_cross_sell_ids() {
-	
+
 	$non_cross_sell_ids = array_diff( edd_csau_get_cart_product_ids(), edd_csau_get_cart_cross_sell_ids() );
 
 	if ( $non_cross_sell_ids )
 		return $non_cross_sell_ids;
 
-	return false;	
+	return false;
 
 }
 
@@ -153,7 +153,7 @@ function edd_csau_get_cart_trigger_ids() {
 
 	// loop through each of the products and compile a list of their cross sells
 	foreach ( $cart_items as $cart_item => $item ) {
-		// if it has the '_edd_csau_cross_sell_products' meta_key, then it's a cross-sell trigger 
+		// if it has the '_edd_csau_cross_sell_products' meta_key, then it's a cross-sell trigger
 		if ( get_post_meta( (int) $item['id'], '_edd_csau_cross_sell_products', true ) ) {
 			// store each id into array
 			$ids[] = (int) $item['id'];
@@ -195,13 +195,13 @@ function edd_csau_has_cart_cross_sells() {
  * @since 1.1
 */
 function edd_csau_set_session() {
-	
+
 	// is single download page
 	if ( is_singular( 'download' ) ) {
 		EDD()->session->set( 'edd_is_single', true );
 	}
 	else {
-		EDD()->session->set( 'edd_is_single', NULL );	
+		EDD()->session->set( 'edd_is_single', NULL );
 	}
 
 	// is checkout page
@@ -209,49 +209,51 @@ function edd_csau_set_session() {
 		EDD()->session->set( 'edd_is_checkout', true );
 	}
 	else {
-		EDD()->session->set( 'edd_is_checkout', NULL );	
+		EDD()->session->set( 'edd_is_checkout', NULL );
 	}
 
 }
 add_action( 'template_redirect', 'edd_csau_set_session' );
 
 
+
+
 /**
  * Store extra meta information against the download at the time it is added to the cart
  *
- * @param $info the default array of meta information stored with the download 
- * @return $info the new array of meta information
+ * @param $item the default array of meta information stored with the download
+ * @return $item the new array of meta information
  *
  * @since 1.1
 */
-function edd_csau_add_to_cart_item( $info ) {
-	
+function edd_csau_add_to_cart_item( $item ) {
+
 	// Cross-sells
 	if ( EDD()->session->get( 'edd_is_checkout' ) ) {
 		// if item is added from checkout page, and it's trigger product is already in the cart, then mark as cross-sell
-		if ( edd_item_in_cart( edd_csau_get_trigger_id( $info['id'], 'cross_sell' ) ) ) {
-			$info['cross_sell'] = true;
+		if ( edd_item_in_cart( edd_csau_get_trigger_id( $item['id'], 'cross_sell' ) ) ) {
+			$item['options']['cross_sell'] = true;
 	 	}
 	}
 	// Upsells
 	else {
 		// get the downloads trigger ID
-		$trigger_id = edd_csau_get_trigger_id( $info['id'], 'upsell' );
+		$trigger_id = edd_csau_get_trigger_id( $item['id'], 'upsell' );
 
 		// if download does not have a trigger ID, exit
 		if ( ! $trigger_id )
-			return $info;
+			return $item;
 
 		// use the trigger ID to get an array of upsell IDs
 		$upsell_ids = get_post_meta( $trigger_id, '_edd_csau_upsell_products' );
 
 		// if this download exists in the upsell IDs array, then mark it as an upsell
-		if ( EDD()->session->get( 'edd_is_single' ) && in_array( $info['id'], $upsell_ids ) ) {
-			$info['upsell'] = true;
+		if ( EDD()->session->get( 'edd_is_single' ) && in_array( $item['id'], $upsell_ids ) ) {
+			$item['options']['upsell'] = true;
 		}
 
 	}
-	
-	return $info;
+
+	return $item;
 }
 add_filter( 'edd_add_to_cart_item', 'edd_csau_add_to_cart_item' );

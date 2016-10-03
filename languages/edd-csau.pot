@@ -1,84 +1,87 @@
-# Copyright (C) 2015 Easy Digital Downloads - Cross-sell & Upsell
-# This file is distributed under the same license as the Easy Digital Downloads - Cross-sell & Upsell package.
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Easy Digital Downloads - Cross-sell & Upsell 1.1.1\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/edd-cross-sell-"
-"upsell\n"
-"POT-Creation-Date: 2015-02-19 15:44:06+00:00\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: Easy Digital Downloads - Cross-sell & Upsell\n"
+"POT-Creation-Date: 2016-10-03 14:05+0200\n"
+"PO-Revision-Date: 2016-10-03 14:05+0200\n"
+"Last-Translator: FX Bénard <fx@fxbenard.com>\n"
+"Language-Team: FX Bénard <fx@fxbenard.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: edd-cross-sell-upsell.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: edd-cross-sell-upsell.php:218
+#: edd-cross-sell-upsell.php:215
 msgid "Settings"
 msgstr ""
 
-#: edd-cross-sell-upsell.php:236
-msgid "View more plugins for Easy Digital Downloads by Sumobi"
-msgstr ""
-
-#: edd-cross-sell-upsell.php:236
-msgid "Author's EDD plugins"
-msgstr ""
-
-#: includes/admin-settings.php:17 includes/metabox.php:18
+#: includes/admin-settings.php:14 includes/admin-settings.php:30
+#: includes/metabox.php:18
 msgid "Cross-sell & Upsell"
 msgstr ""
 
-#: includes/admin-settings.php:18
+#: includes/admin-settings.php:31
 msgid "Configure EDD Upsell Settings"
 msgstr ""
 
-#: includes/admin-settings.php:23
+#: includes/admin-settings.php:36
 msgid "Default Upsell Heading"
 msgstr ""
 
-#: includes/admin-settings.php:24
+#: includes/admin-settings.php:37
+#, php-format
 msgid "Enter the text to display above Upsell %s on the single %s page"
 msgstr ""
 
-#: includes/admin-settings.php:27 includes/admin-settings.php:35
+#: includes/admin-settings.php:40 includes/admin-settings.php:48
 #: includes/template-functions.php:109 includes/template-functions.php:124
 msgid "You may also like"
 msgstr ""
 
-#: includes/admin-settings.php:31
+#: includes/admin-settings.php:44
 msgid "Default Cross-sell Heading"
 msgstr ""
 
-#: includes/admin-settings.php:32
+#: includes/admin-settings.php:45
+#, php-format
 msgid "Enter the text to display above Cross-sell %s at checkout"
 msgstr ""
 
-#: includes/admin-settings.php:39
+#: includes/admin-settings.php:52
 msgid "Maximum Upsells To Show"
 msgstr ""
 
-#: includes/admin-settings.php:40
+#: includes/admin-settings.php:53
+#, php-format
 msgid "Enter the number of Upsells that should display on a single %s page"
 msgstr ""
 
-#: includes/admin-settings.php:44 includes/admin-settings.php:56
+#: includes/admin-settings.php:57 includes/admin-settings.php:69
 msgid "1"
 msgstr ""
 
-#: includes/admin-settings.php:45 includes/admin-settings.php:57
+#: includes/admin-settings.php:58 includes/admin-settings.php:70
 msgid "2"
 msgstr ""
 
-#: includes/admin-settings.php:46 includes/admin-settings.php:58
+#: includes/admin-settings.php:59 includes/admin-settings.php:71
 msgid "3"
 msgstr ""
 
-#: includes/admin-settings.php:52
+#: includes/admin-settings.php:65
 msgid "Maximum Cross-sells To Show"
 msgstr ""
 
-#: includes/admin-settings.php:53
+#: includes/admin-settings.php:66
 msgid "Enter the number of cross-sells that should display at checkout"
 msgstr ""
 
@@ -87,10 +90,12 @@ msgid "This plugin"
 msgstr ""
 
 #: includes/class-activation.php:81
+#, php-format
 msgid " requires %sEasy Digital Downloads%s. Please activate it to continue."
 msgstr ""
 
 #: includes/class-activation.php:83
+#, php-format
 msgid " requires %sEasy Digital Downloads%s. Please install it to continue."
 msgstr ""
 
@@ -150,12 +155,12 @@ msgid "Purchase Key"
 msgstr ""
 
 #: includes/class-export-cross-sells.php:74
-#: includes/class-export-upsells.php:74 includes/class-logs-list-table.php:100
+#: includes/class-export-upsells.php:74 includes/class-logs-list-table.php:102
 msgid "Date"
 msgstr ""
 
 #: includes/class-export-cross-sells.php:75
-#: includes/class-export-upsells.php:75 includes/class-logs-list-table.php:96
+#: includes/class-export-upsells.php:75 includes/class-logs-list-table.php:98
 msgid "User"
 msgstr ""
 
@@ -174,31 +179,31 @@ msgstr ""
 msgid "guest"
 msgstr ""
 
-#: includes/class-logs-list-table.php:95
+#: includes/class-logs-list-table.php:97
 msgid "Log ID"
 msgstr ""
 
-#: includes/class-logs-list-table.php:97
+#: includes/class-logs-list-table.php:99
 msgid "Download"
 msgstr ""
 
-#: includes/class-logs-list-table.php:98
+#: includes/class-logs-list-table.php:100
 msgid "Item Amount"
 msgstr ""
 
-#: includes/class-logs-list-table.php:99
+#: includes/class-logs-list-table.php:101
 msgid "Payment ID"
 msgstr ""
 
-#: includes/class-logs-list-table.php:255
+#: includes/class-logs-list-table.php:257
 msgid "All"
 msgstr ""
 
-#: includes/class-reports-table.php:99
+#: includes/class-reports-table.php:102
 msgid "Sales"
 msgstr ""
 
-#: includes/class-reports-table.php:100
+#: includes/class-reports-table.php:103
 msgid "Earnings"
 msgstr ""
 
@@ -207,27 +212,33 @@ msgid "Cross-selling/Upselling"
 msgstr ""
 
 #: includes/contextual-help.php:23
+#, php-format
 msgid "<strong>Upselling</strong> - Upsell %s appear on the Single %s page"
 msgstr ""
 
 #: includes/contextual-help.php:24
+#, php-format
 msgid ""
 "<strong>Cross-selling</strong> - Cross-sell %s appear on the Checkout page"
 msgstr ""
 
 #: includes/dashboard-columns.php:70
+#, php-format
 msgid "%s with cross-sells"
 msgstr ""
 
 #: includes/dashboard-columns.php:71
+#, php-format
 msgid "%s with upsells"
 msgstr ""
 
 #: includes/dashboard-columns.php:72
+#, php-format
 msgid "%s with cross-sells or upsells"
 msgstr ""
 
 #: includes/dashboard-columns.php:76
+#, php-format
 msgid "Show all %s"
 msgstr ""
 
@@ -268,24 +279,29 @@ msgid "Upsell Heading"
 msgstr ""
 
 #: includes/metabox.php:36
+#, php-format
 msgid ""
 "Shown with upsell %s on the single %s page. If not set, the default heading "
 "in the plugin's settings will be used instead"
 msgstr ""
 
 #: includes/metabox.php:38
+#, php-format
 msgid "Upsell %s"
 msgstr ""
 
 #: includes/metabox.php:40 includes/metabox.php:69
+#, php-format
 msgid "Select %s"
 msgstr ""
 
 #: includes/metabox.php:54 includes/metabox.php:83
+#, php-format
 msgid "No %s found"
 msgstr ""
 
 #: includes/metabox.php:59
+#, php-format
 msgid "Select the %s to upsell to the customer on the single %s page"
 msgstr ""
 
@@ -294,6 +310,7 @@ msgid "Cross-sell Heading"
 msgstr ""
 
 #: includes/metabox.php:65
+#, php-format
 msgid ""
 "Shown with cross-sells at checkout, but only if the selected cross-sells "
 "below are shown on their own. If not set, or cross-sells from other %s are "
@@ -302,10 +319,12 @@ msgid ""
 msgstr ""
 
 #: includes/metabox.php:67
+#, php-format
 msgid "Cross-sell %s"
 msgstr ""
 
 #: includes/metabox.php:88
+#, php-format
 msgid ""
 "Select the %s to be shown to the customer at checkout when this %s is added "
 "to the cart"
@@ -319,11 +338,11 @@ msgstr ""
 msgid "Added to cart"
 msgstr ""
 
-#: includes/view-order-details.php:28
+#: includes/view-order-details.php:30
 msgid "Cross-sells included with this payment"
 msgstr ""
 
-#: includes/view-order-details.php:88
+#: includes/view-order-details.php:90
 msgid "Upsells included with this payment"
 msgstr ""
 
@@ -332,7 +351,7 @@ msgid "Easy Digital Downloads - Cross-sell & Upsell"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "http://sumobi.com/shop/edd-cross-sell-and-upsell/"
+msgid "https://easydigitaldownloads.com/downloads/edd-cross-sell-and-upsell/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -342,9 +361,9 @@ msgid ""
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Andrew Munro, Sumobi"
+msgid "Easy Digital Downloads"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://sumobi.com/"
+msgid "https://easydigitaldownloads.com"
 msgstr ""

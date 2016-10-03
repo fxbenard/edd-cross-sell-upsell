@@ -3,192 +3,212 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Easy Digital Downloads - Cross-sell & Upsell 1.1.1\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/edd-cross-sell-upsell\n"
-"POT-Creation-Date: 2015-02-19 15:44:06+00:00\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/edd-cross-sell-"
+"upsell\n"
+"POT-Creation-Date: 2016-10-03 14:05+0200\n"
+"PO-Revision-Date: 2016-10-03 14:08+0200\n"
+"Last-Translator: FX Bénard <fx@fxbenard.com>\n"
+"Language-Team: fxbenard | FxB <fx@fxbenard.com>\n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-02-24 14:37+0100\n"
-"Last-Translator: fxbenard | FxB <fx@fxbenard.com>\n"
-"Language-Team: fxbenard | FxB <fx@fxbenard.com>\n"
-"X-Generator: Poedit 1.7.3\n"
+"X-Generator: Poedit 1.8.9\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"Language: fr_FR\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Bookmarks: -1,-1,-1,66,-1,-1,-1,-1,-1,-1\n"
 
-#: edd-cross-sell-upsell.php:218
+#: edd-cross-sell-upsell.php:215
 msgid "Settings"
 msgstr "Réglages"
 
-#: edd-cross-sell-upsell.php:236
-msgid "View more plugins for Easy Digital Downloads by Sumobi"
-msgstr "Afficher les autres extensions pour Easy Digital Downloads de Sumobi"
-
-#: edd-cross-sell-upsell.php:236
-msgid "Author's EDD plugins"
-msgstr "Extensions EDD de l'auteur"
-
-#: includes/admin-settings.php:17 includes/metabox.php:18
+#: includes/admin-settings.php:14 includes/admin-settings.php:30
+#: includes/metabox.php:18
 msgid "Cross-sell & Upsell"
 msgstr "Ventes croisées & incitatives"
 
-#: includes/admin-settings.php:18
+#: includes/admin-settings.php:31
 msgid "Configure EDD Upsell Settings"
-msgstr "Configuration des réglages d'EDD Upsell"
+msgstr "Configuration des réglages d’EDD Upsell"
 
-#: includes/admin-settings.php:23
+#: includes/admin-settings.php:36
 msgid "Default Upsell Heading"
 msgstr "En-tête par défaut de la vente incitative"
 
-#: includes/admin-settings.php:24
+#: includes/admin-settings.php:37
+#, php-format
 msgid "Enter the text to display above Upsell %s on the single %s page"
-msgstr "Entrer le texte à afficher au-dessus de la vente incitative %s sur la page unique %s"
+msgstr ""
+"Saisissez le texte à afficher au-dessus de la vente incitative %s sur la "
+"page unique %s"
 
-#: includes/admin-settings.php:27 includes/admin-settings.php:35 includes/template-functions.php:109
-#: includes/template-functions.php:124
+#: includes/admin-settings.php:40 includes/admin-settings.php:48
+#: includes/template-functions.php:109 includes/template-functions.php:124
 msgid "You may also like"
 msgstr "Vous aimerez aussi"
 
-#: includes/admin-settings.php:31
+#: includes/admin-settings.php:44
 msgid "Default Cross-sell Heading"
 msgstr "En-tête par défaut de la vente croisée"
 
-#: includes/admin-settings.php:32
+#: includes/admin-settings.php:45
+#, php-format
 msgid "Enter the text to display above Cross-sell %s at checkout"
-msgstr "Entrer le texte à afficher au-dessus de la vente croisée %s sur la commande"
+msgstr ""
+"Saisissez le texte à afficher au-dessus de la vente croisée %s sur la "
+"commande"
 
-#: includes/admin-settings.php:39
+#: includes/admin-settings.php:52
 msgid "Maximum Upsells To Show"
 msgstr "Nombre max de ventes incitatives à afficher"
 
-#: includes/admin-settings.php:40
+#: includes/admin-settings.php:53
+#, php-format
 msgid "Enter the number of Upsells that should display on a single %s page"
-msgstr "Entrer le nombre de ventes incitatives à afficher sur la page unique %s"
+msgstr ""
+"Saisissez le nombre de ventes incitatives à afficher sur la page unique %s"
 
-#: includes/admin-settings.php:44 includes/admin-settings.php:56
+#: includes/admin-settings.php:57 includes/admin-settings.php:69
 msgid "1"
 msgstr "1"
 
-#: includes/admin-settings.php:45 includes/admin-settings.php:57
+#: includes/admin-settings.php:58 includes/admin-settings.php:70
 msgid "2"
 msgstr "2"
 
-#: includes/admin-settings.php:46 includes/admin-settings.php:58
+#: includes/admin-settings.php:59 includes/admin-settings.php:71
 msgid "3"
 msgstr "3"
 
-#: includes/admin-settings.php:52
+#: includes/admin-settings.php:65
 msgid "Maximum Cross-sells To Show"
 msgstr "Nombre max de ventes croisées à afficher"
 
-#: includes/admin-settings.php:53
+#: includes/admin-settings.php:66
 msgid "Enter the number of cross-sells that should display at checkout"
-msgstr "Entrer le nombre de ventes croisées à afficher sur la commande"
+msgstr "Saisissez le nombre de ventes croisées à afficher sur la commande"
 
 #: includes/class-activation.php:47
 msgid "This plugin"
 msgstr "Cette extension"
 
 #: includes/class-activation.php:81
+#, php-format
 msgid " requires %sEasy Digital Downloads%s. Please activate it to continue."
-msgstr "nécessite %sEasy Digital Downloads%s. Veuillez l'activer pour continuer."
+msgstr ""
+"nécessite %sEasy Digital Downloads%s. Veuillez l’activer pour continuer."
 
 #: includes/class-activation.php:83
+#, php-format
 msgid " requires %sEasy Digital Downloads%s. Please install it to continue."
-msgstr "nécessite %sEasy Digital Downloads%s. Veuillez l'installer pour continuer."
+msgstr ""
+"nécessite %sEasy Digital Downloads%s. Veuillez l’installer pour continuer."
 
-#: includes/class-export-cross-sells.php:63 includes/class-export-upsells.php:63
+#: includes/class-export-cross-sells.php:63
+#: includes/class-export-upsells.php:63
 msgid "ID"
 msgstr "ID"
 
-#: includes/class-export-cross-sells.php:64 includes/class-export-upsells.php:64
+#: includes/class-export-cross-sells.php:64
+#: includes/class-export-upsells.php:64
 msgid "Email"
 msgstr "E-mail"
 
-#: includes/class-export-cross-sells.php:65 includes/class-export-upsells.php:65
+#: includes/class-export-cross-sells.php:65
+#: includes/class-export-upsells.php:65
 msgid "First Name"
 msgstr "Prénom"
 
-#: includes/class-export-cross-sells.php:66 includes/class-export-upsells.php:66
+#: includes/class-export-cross-sells.php:66
+#: includes/class-export-upsells.php:66
 msgid "Last Name"
 msgstr "Nom"
 
-#: includes/class-export-cross-sells.php:67 includes/class-export-upsells.php:67
+#: includes/class-export-cross-sells.php:67
+#: includes/class-export-upsells.php:67
 msgid "Products"
 msgstr "Produits"
 
-#: includes/class-export-cross-sells.php:68 includes/class-export-upsells.php:68
+#: includes/class-export-cross-sells.php:68
+#: includes/class-export-upsells.php:68
 msgid "SKUs"
 msgstr "UGSs"
 
-#: includes/class-export-cross-sells.php:69 includes/class-export-upsells.php:69
+#: includes/class-export-cross-sells.php:69
+#: includes/class-export-upsells.php:69
 msgid "Amount"
 msgstr "Montant"
 
-#: includes/class-export-cross-sells.php:70 includes/class-export-upsells.php:70
+#: includes/class-export-cross-sells.php:70
+#: includes/class-export-upsells.php:70
 msgid "Tax"
 msgstr "TVA"
 
-#: includes/class-export-cross-sells.php:71 includes/class-export-upsells.php:71
+#: includes/class-export-cross-sells.php:71
+#: includes/class-export-upsells.php:71
 msgid "Discount Code"
 msgstr "Code de remise"
 
-#: includes/class-export-cross-sells.php:72 includes/class-export-upsells.php:72
+#: includes/class-export-cross-sells.php:72
+#: includes/class-export-upsells.php:72
 msgid "Payment Method"
-msgstr "Méthode de paiement "
+msgstr "Mode de paiement "
 
-#: includes/class-export-cross-sells.php:73 includes/class-export-upsells.php:73
+#: includes/class-export-cross-sells.php:73
+#: includes/class-export-upsells.php:73
 msgid "Purchase Key"
-msgstr "Clé d'achat"
+msgstr "Clé d’achat"
 
-#: includes/class-export-cross-sells.php:74 includes/class-export-upsells.php:74
-#: includes/class-logs-list-table.php:100
+#: includes/class-export-cross-sells.php:74
+#: includes/class-export-upsells.php:74 includes/class-logs-list-table.php:102
 msgid "Date"
 msgstr "Date"
 
-#: includes/class-export-cross-sells.php:75 includes/class-export-upsells.php:75
-#: includes/class-logs-list-table.php:96
+#: includes/class-export-cross-sells.php:75
+#: includes/class-export-upsells.php:75 includes/class-logs-list-table.php:98
 msgid "User"
 msgstr "Utilisateur"
 
-#: includes/class-export-cross-sells.php:76 includes/class-export-upsells.php:76
+#: includes/class-export-cross-sells.php:76
+#: includes/class-export-upsells.php:76
 msgid "Status"
 msgstr "État"
 
-#: includes/class-export-cross-sells.php:181 includes/class-export-upsells.php:180
+#: includes/class-export-cross-sells.php:181
+#: includes/class-export-upsells.php:180
 msgid "none"
 msgstr "aucun"
 
-#: includes/class-export-cross-sells.php:185 includes/class-export-upsells.php:184
+#: includes/class-export-cross-sells.php:185
+#: includes/class-export-upsells.php:184
 msgid "guest"
 msgstr "invité"
 
-#: includes/class-logs-list-table.php:95
+#: includes/class-logs-list-table.php:97
 msgid "Log ID"
 msgstr "ID du Log"
 
-#: includes/class-logs-list-table.php:97
+#: includes/class-logs-list-table.php:99
 msgid "Download"
 msgstr "Téléchargement"
 
-#: includes/class-logs-list-table.php:98
+#: includes/class-logs-list-table.php:100
 msgid "Item Amount"
-msgstr "Quantité d'article"
+msgstr "Quantité d’article"
 
-#: includes/class-logs-list-table.php:99
+#: includes/class-logs-list-table.php:101
 msgid "Payment ID"
 msgstr "ID du paiement"
 
-#: includes/class-logs-list-table.php:255
+#: includes/class-logs-list-table.php:257
 msgid "All"
 msgstr "Toutes"
 
-#: includes/class-reports-table.php:99
+#: includes/class-reports-table.php:102
 msgid "Sales"
 msgstr "Ventes"
 
-#: includes/class-reports-table.php:100
+#: includes/class-reports-table.php:103
 msgid "Earnings"
 msgstr "Revenus"
 
@@ -197,32 +217,43 @@ msgid "Cross-selling/Upselling"
 msgstr "Ventes Croisées/Incitatives"
 
 #: includes/contextual-help.php:23
+#, php-format
 msgid "<strong>Upselling</strong> - Upsell %s appear on the Single %s page"
-msgstr "<strong>Vente incitative</strong> - La vente incitative %s apparait sur la page unique %s"
+msgstr ""
+"<strong>Vente incitative</strong> - La vente incitative %s apparait sur la "
+"page unique %s"
 
 #: includes/contextual-help.php:24
-msgid "<strong>Cross-selling</strong> - Cross-sell %s appear on the Checkout page"
-msgstr "<strong>Vente croisée</strong> - La vente croisée %s apparait sur la page de commande"
+#, php-format
+msgid ""
+"<strong>Cross-selling</strong> - Cross-sell %s appear on the Checkout page"
+msgstr ""
+"<strong>Vente croisée</strong> - La vente croisée %s apparait sur la page de "
+"commande"
 
 #: includes/dashboard-columns.php:70
+#, php-format
 msgid "%s with cross-sells"
 msgstr "%s avec ventes croisées"
 
 #: includes/dashboard-columns.php:71
+#, php-format
 msgid "%s with upsells"
 msgstr "%s avec ventes incitatives"
 
 #: includes/dashboard-columns.php:72
+#, php-format
 msgid "%s with cross-sells or upsells"
 msgstr "%s avec ventes croisées ou ventes incitatives"
 
 #: includes/dashboard-columns.php:76
+#, php-format
 msgid "Show all %s"
 msgstr "Afficher toutes les %s"
 
 #: includes/export-functions.php:47
 msgid "Export Cross-sell History"
-msgstr "Exporter l'historique des ventes croisées"
+msgstr "Exporter l’historique des ventes croisées"
 
 #: includes/export-functions.php:49
 msgid "Download a CSV of all cross-sells recorded."
@@ -238,11 +269,12 @@ msgstr "Générer le CSV"
 
 #: includes/export-functions.php:79
 msgid "Export Upsell History"
-msgstr "Exporter l'historique des ventes incitatives"
+msgstr "Exporter l’historique des ventes incitatives"
 
 #: includes/export-functions.php:81
 msgid "Download a CSV of all upsells recorded."
-msgstr "Télécharger un fichier CSV de tous les ventes incitatives enregistrées."
+msgstr ""
+"Télécharger un fichier CSV de tous les ventes incitatives enregistrées."
 
 #: includes/logs.php:52 includes/reports.php:16
 msgid "Cross-sells"
@@ -257,26 +289,31 @@ msgid "Upsell Heading"
 msgstr "En-tête de la vente incitative"
 
 #: includes/metabox.php:36
+#, php-format
 msgid ""
-"Shown with upsell %s on the single %s page. If not set, the default heading in the plugin's settings will "
-"be used instead"
+"Shown with upsell %s on the single %s page. If not set, the default heading "
+"in the plugin's settings will be used instead"
 msgstr ""
-"Affiché avec les ventes incitatives %s sur la page unique %s. Si non défini, l'en-tête par défaut de "
-"l'extension sera utilisée à la place."
+"Affiché avec les ventes incitatives %s sur la page unique %s. Si non défini, "
+"l’en-tête par défaut de l’extension sera utilisée à la place."
 
 #: includes/metabox.php:38
+#, php-format
 msgid "Upsell %s"
 msgstr "Vente incitative %s"
 
 #: includes/metabox.php:40 includes/metabox.php:69
+#, php-format
 msgid "Select %s"
 msgstr "Sélectionner %s"
 
 #: includes/metabox.php:54 includes/metabox.php:83
+#, php-format
 msgid "No %s found"
 msgstr "Aucune %s trouvée"
 
 #: includes/metabox.php:59
+#, php-format
 msgid "Select the %s to upsell to the customer on the single %s page"
 msgstr "Sélectionner le %s à inciter à vos clients sur la page unique %s"
 
@@ -285,22 +322,31 @@ msgid "Cross-sell Heading"
 msgstr "En-tête de la vente croisée"
 
 #: includes/metabox.php:65
+#, php-format
 msgid ""
-"Shown with cross-sells at checkout, but only if the selected cross-sells below are shown on their own. If "
-"not set, or cross-sells from other %s are shown together, the default heading in the plugin's settings will "
-"be used instead"
+"Shown with cross-sells at checkout, but only if the selected cross-sells "
+"below are shown on their own. If not set, or cross-sells from other %s are "
+"shown together, the default heading in the plugin's settings will be used "
+"instead"
 msgstr ""
-"Affiché avec des ventes croisées à la commande, mais seulement si les ventes croisées ci-dessous sont elles "
-"même affichées. Si non défini, ou si des ventes incitatives d'autres %s sont affichées, l'en-tête par "
-"défaut de l'extension sera utilisée à la place."
+"Affiché avec des ventes croisées à la commande, mais seulement si les ventes "
+"croisées ci-dessous sont elles même affichées. Si non défini, ou si des "
+"ventes incitatives d’autres %s sont affichées, l’en-tête par défaut de "
+"l’extension sera utilisée à la place."
 
 #: includes/metabox.php:67
+#, php-format
 msgid "Cross-sell %s"
 msgstr "Vente croisée %s"
 
 #: includes/metabox.php:88
-msgid "Select the %s to be shown to the customer at checkout when this %s is added to the cart"
-msgstr "Sélectionner le %s à montrer à vos clients à la commande quand le %s est ajouté au panier "
+#, php-format
+msgid ""
+"Select the %s to be shown to the customer at checkout when this %s is added "
+"to the cart"
+msgstr ""
+"Sélectionner le %s à montrer à vos clients à la commande quand le %s est "
+"ajouté au panier "
 
 #: includes/template-functions.php:187 includes/template-functions.php:201
 msgid "Add to cart"
@@ -310,11 +356,11 @@ msgstr "Ajouter au panier"
 msgid "Added to cart"
 msgstr "Ajouté au panier"
 
-#: includes/view-order-details.php:28
+#: includes/view-order-details.php:30
 msgid "Cross-sells included with this payment"
 msgstr "Ventes croisées inclus dans le paiement"
 
-#: includes/view-order-details.php:88
+#: includes/view-order-details.php:90
 msgid "Upsells included with this payment"
 msgstr "Ventes incitatives inclus dans le paiement"
 
@@ -323,18 +369,34 @@ msgid "Easy Digital Downloads - Cross-sell & Upsell"
 msgstr "Easy Digital Downloads - Cross-sell & Upsell"
 
 #. Plugin URI of the plugin/theme
-msgid "http://sumobi.com/shop/edd-cross-sell-and-upsell/"
-msgstr "http://sumobi.com/shop/edd-cross-sell-and-upsell/"
+msgid "https://easydigitaldownloads.com/downloads/edd-cross-sell-and-upsell/"
+msgstr "https://easydigitaldownloads.com/downloads/edd-cross-sell-and-upsell/"
 
 #. Description of the plugin/theme
-msgid "Increase sales and customer retention by Cross-selling and Upselling to your customers"
+msgid ""
+"Increase sales and customer retention by Cross-selling and Upselling to your "
+"customers"
 msgstr ""
-"Augmenter vos ventes et la fidélisation de votre clientèle en proposant des ventes croisées et incitatives"
+"Augmenter vos ventes et la fidélisation de votre clientèle en proposant des "
+"ventes croisées et incitatives"
 
 #. Author of the plugin/theme
-msgid "Andrew Munro, Sumobi"
-msgstr "Andrew Munro, Sumobi"
+msgid "Easy Digital Downloads"
+msgstr "Easy Digital Downloads"
 
 #. Author URI of the plugin/theme
-msgid "http://sumobi.com/"
-msgstr "http://sumobi.com/"
+msgid "https://easydigitaldownloads.com"
+msgstr "https://easydigitaldownloads.com"
+
+#~ msgid "View more plugins for Easy Digital Downloads by Sumobi"
+#~ msgstr ""
+#~ "Afficher les autres extensions pour Easy Digital Downloads de Sumobi"
+
+#~ msgid "Author's EDD plugins"
+#~ msgstr "Extensions EDD de l'auteur"
+
+#~ msgid "Andrew Munro, Sumobi"
+#~ msgstr "Andrew Munro, Sumobi"
+
+#~ msgid "http://sumobi.com/"
+#~ msgstr "http://sumobi.com/"

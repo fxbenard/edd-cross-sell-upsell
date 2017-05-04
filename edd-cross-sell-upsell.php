@@ -3,7 +3,7 @@
 Plugin Name: Easy Digital Downloads - Cross-sell & Upsell
 Plugin URI: https://easydigitaldownloads.com/downloads/edd-cross-sell-and-upsell/
 Description: Increase sales and customer retention by Cross-selling and Upselling to your customers
-Version: 1.1.4
+Version: 1.1.5
 Author: Easy Digital Downloads
 Author URI: https://easydigitaldownloads.com
 */
@@ -33,7 +33,7 @@ if ( ! class_exists( 'EDD_Cross_Sell_And_Upsell' ) ) {
 		/**
 		 * Plugin Version
 		 */
-		private $version = '1.1.4';
+		private $version = '1.1.5';
 
 		/**
 		 * Plugin Title

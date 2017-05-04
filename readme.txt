@@ -8,6 +8,10 @@ Increase sales and customer retention by Cross-selling and Uselling to your cust
 
 == Changelog ==
 
+= 1.1.5 =
+
+* Fix: Cross-sells and Upsells already in the cart should not be displayed
+
 = 1.1.4 =
 * Fix: Cross-sells/Upsells not showing reports
 * Tweak: Extension settings moved to sub-section

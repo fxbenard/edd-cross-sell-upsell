@@ -28,8 +28,9 @@ function edd_csau_html( $columns = '3' ) {
 		$cart_items = edd_get_cart_contents();
 
 		// return if there's nothing in the cart
-		if ( ! $cart_items )
+		if ( ! $cart_items ) {
 			return;
+		}
 
 		$cart = array();
 
@@ -53,8 +54,9 @@ function edd_csau_html( $columns = '3' ) {
 		$products = array_filter( $products );
 
 		// return if no cross sell products after clean
-		if ( ! $products )
+		if ( ! $products ) {
 			return;
+		}
 
 		// merge into single level array
 		$products = call_user_func_array( 'array_merge', $products );
@@ -62,8 +64,13 @@ function edd_csau_html( $columns = '3' ) {
 		// remove duplicate IDs
 		$products = array_unique( $products );
 
-	}
-	else {
+		foreach( $products as $key => $product ) {
+			if( edd_item_in_cart( $product ) ) {
+				unset( $products[ $key ] );
+			}
+		}
+
+	} else {
 		return;
 	}
 

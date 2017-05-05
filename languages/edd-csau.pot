@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Easy Digital Downloads - Cross-sell & Upsell\n"
-"POT-Creation-Date: 2016-10-03 14:05+0200\n"
+"POT-Creation-Date: 2017-05-05 12:19+0200\n"
 "PO-Revision-Date: 2016-10-03 14:05+0200\n"
 "Last-Translator: FX Bénard <fx@fxbenard.com>\n"
 "Language-Team: FX Bénard <fx@fxbenard.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 2.0.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: edd-cross-sell-upsell.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -43,7 +43,7 @@ msgid "Enter the text to display above Upsell %s on the single %s page"
 msgstr ""
 
 #: includes/admin-settings.php:40 includes/admin-settings.php:48
-#: includes/template-functions.php:109 includes/template-functions.php:124
+#: includes/template-functions.php:116 includes/template-functions.php:131
 msgid "You may also like"
 msgstr ""
 
@@ -330,11 +330,11 @@ msgid ""
 "to the cart"
 msgstr ""
 
-#: includes/template-functions.php:187 includes/template-functions.php:201
+#: includes/template-functions.php:194 includes/template-functions.php:208
 msgid "Add to cart"
 msgstr ""
 
-#: includes/template-functions.php:198
+#: includes/template-functions.php:205
 msgid "Added to cart"
 msgstr ""
 

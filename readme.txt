@@ -8,6 +8,11 @@ Increase sales and customer retention by Cross-selling and Uselling to your cust
 
 == Changelog ==
 
+= 1.1.6 =
+
+* Fix: Undefined variable during purchase if Test Mode is enabled
+* Fix: Warning when refunding payments when using PHP 7.1
+
 = 1.1.5 =
 
 * Fix: Cross-sells and Upsells already in the cart should not be displayed

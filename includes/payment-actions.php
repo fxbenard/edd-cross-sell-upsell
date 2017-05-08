@@ -15,6 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 */
 function edd_csau_payment_actions( $payment_id ) {
 
+	$types        = array();
 	$payment      = new EDD_Payment( $payment_id );
 	$cart_details = $payment->cart_details;
 
@@ -49,14 +50,16 @@ function edd_csau_payment_actions( $payment_id ) {
 
 				}
 
-				$types[] = $type;
-				$types = array_unique( array_filter( $types ) );
+				if( ! empty( $type ) ) {
+					$types[] = $type;
+					$types = array_unique( array_filter( $types ) );
+					// Clear the total earnings cache
+					delete_transient( 'edd_' . $type . '_earnings_total' );
+				}
 			}
 
 		}
 
-		// Clear the total earnings cache
-		delete_transient( 'edd_' . $type . '_earnings_total' );
 	}
 
 	if ( $types ) {

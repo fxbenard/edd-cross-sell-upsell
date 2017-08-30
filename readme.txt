@@ -1,8 +1,8 @@
 === Easy Digital Downloads - Cross-sell & Upsell ===
 
-Plugin URI: http://sumobi.com/shop/edd-cross-sell-and-upsell/
-Author: Andrew Munro, Sumobi
-Author URI: http://sumobi.com/
+Plugin URI: https://easydigitaldownloads.com/downloads/edd-cross-sell-and-upsell/
+Author: Easy Digital Downloads
+Author URI: https://easydigitaldownloads.com
 
 Increase sales and customer retention by Cross-selling and Uselling to your customers
 

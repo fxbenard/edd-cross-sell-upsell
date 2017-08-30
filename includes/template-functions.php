@@ -197,7 +197,7 @@ function edd_csau_html( $columns = '3' ) {
 									if ( $show_button ) : ?>
 
 									<div class="edd_download_buy_button">
-										<?php echo edd_get_purchase_link( array( 'download_id' => get_the_ID(), 'text' => $text, 'price' => $price ) ); ?>
+										<?php echo edd_get_purchase_link( array( 'download_id' => get_the_ID(), 'text' => $text, 'price' => $price, 'direct' => false ) ); ?>
 									</div>
 									<?php endif; ?>
 

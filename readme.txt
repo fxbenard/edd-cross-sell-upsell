@@ -4,7 +4,7 @@ Plugin URI: https://easydigitaldownloads.com/downloads/edd-cross-sell-and-upsell
 Author: Easy Digital Downloads
 Author URI: https://easydigitaldownloads.com
 
-Increase sales and customer retention by Cross-selling and Uselling to your customers
+Increase sales and customer retention by Cross-selling and Upselling to your customers
 
 == Changelog ==
 

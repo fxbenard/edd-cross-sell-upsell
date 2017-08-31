@@ -260,6 +260,12 @@ function edd_csau_display_on_checkout_page() {
 */
 function edd_csau_checkout_display() {
 	add_action( 'edd_after_checkout_cart', 'edd_csau_display_on_checkout_page' );
+
+	if ( edd_is_checkout() ) {
+		// GitHub Issue: https://github.com/easydigitaldownloads/edd-cross-sell-upsell/issues/4
+		add_filter( 'edd_straight_to_checkout', '__return_true' );
+	}
+
 }
 add_action( 'template_redirect', 'edd_csau_checkout_display' );
 

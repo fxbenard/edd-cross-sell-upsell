@@ -8,6 +8,10 @@ Increase sales and customer retention by Cross-selling and Upselling to your cus
 
 == Changelog ==
 
+= 1.1.7 =
+
+* Fix: The checkout page will now be refreshed when cross-sell downloads are added to the cart
+
 = 1.1.6 =
 
 * Fix: Undefined variable during purchase if Test Mode is enabled

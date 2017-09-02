@@ -252,7 +252,7 @@ function edd_csau_get_download_earnings_stats( $download_id, $type ) {
  * @return float $total Total earnings
  */
 function edd_csau_increase_total_earnings( $amount = 0, $type ) {
-	$total = edd_csau_get_total_earnings( $type );
+	$total = (float) edd_csau_get_total_earnings( $type );
 	$total += $amount;
 
 	update_option( 'edd_' . $type . '_earnings_total', $total );
@@ -267,7 +267,7 @@ function edd_csau_increase_total_earnings( $amount = 0, $type ) {
  * @return float $total Total earnings
  */
 function edd_csau_decrease_total_earnings( $amount = 0, $type ) {
-	$total = edd_csau_get_total_earnings( $type );
+	$total = (float) edd_csau_get_total_earnings( $type );
 	$total -= $amount;
 
 	if( $total < 0 ) {
@@ -310,7 +310,7 @@ function edd_csau_get_total_earnings( $type ) {
 
 			if ( $payments ) {
 				foreach ( $payments as $payment ) {
-					$total += edd_csau_get_payment_amount( $payment, $type );
+					$total += (float) edd_csau_get_payment_amount( $payment, $type );
 				}
 			}
 
@@ -341,7 +341,7 @@ function edd_csau_get_payment_amount( $payment_id, $type ) {
 
 	$amount = get_post_meta( $payment_id, '_edd_payment_' . $type . '_total', true );
 
-	return apply_filters( 'edd_csau_' . $type . '_amount', $amount, $type );
+	return (float) apply_filters( 'edd_csau_' . $type . '_amount', $amount, $type );
 }
 
 /**

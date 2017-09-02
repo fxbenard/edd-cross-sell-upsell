@@ -1,12 +1,21 @@
 === Easy Digital Downloads - Cross-sell & Upsell ===
 
-Plugin URI: http://sumobi.com/shop/edd-cross-sell-and-upsell/
-Author: Andrew Munro, Sumobi
-Author URI: http://sumobi.com/
+Plugin URI: https://easydigitaldownloads.com/downloads/edd-cross-sell-and-upsell/
+Author: Easy Digital Downloads
+Author URI: https://easydigitaldownloads.com
 
-Increase sales and customer retention by Cross-selling and Uselling to your customers
+Increase sales and customer retention by Cross-selling and Upselling to your customers
 
 == Changelog ==
+
+= 1.1.7 =
+
+* Fix: The checkout page will now be refreshed when cross-sell downloads are added to the cart
+
+= 1.1.6 =
+
+* Fix: Undefined variable during purchase if Test Mode is enabled
+* Fix: Warning when refunding payments when using PHP 7.1
 
 = 1.1.5 =
 
